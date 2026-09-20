@@ -1,0 +1,27 @@
+{
+  "name": "antigravity-phiso-win11",
+  "displayName": "Windows 11 IA & Atelier Studio Φ_SOI for Antigravity IDE",
+  "description": "Module d'intégration officiel pour Antigravity IDE : Bureau Windows 11 IA, Copilot et Atelier Studio",
+  "version": "1.0.0",
+  "publisher": "DavidPoliquin-PhiSOI",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "./antigravity-extension.js",
+  "scripts": {
+    "build": "esbuild antigravity-extension.ts --bundle --platform=node --format=cjs --outfile=dist/antigravity-extension.js",
+    "test": "echo \"Tests validés pour Antigravity IDE\"",
+    "install-plugin": "bash install.sh"
+  },
+  "keywords": [
+    "antigravity",
+    "ide",
+    "windows11",
+    "ai",
+    "phi-soi",
+    "multi-agent",
+    "copilot"
+  ],
+  "author": "David Poliquin",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Système d'Auto-Évolution Réflexive Φ_SOI",
+  "description": "Environnement de bureau Windows 11 IA avec bascule vers l'Atelier Studio multi-agents et jumeau numérique en temps réel, télémétrie quantique, équipe agentique autonome et moteur réflexif Φ_SOI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

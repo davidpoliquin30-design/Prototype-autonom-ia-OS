@@ -1,0 +1,86 @@
+{
+  "id": "antigravity.phiso.win11",
+  "name": "Windows 11 IA & Atelier Studio Φ_SOI for Antigravity IDE",
+  "displayName": "Windows 11 IA - Système Réflexive Φ_SOI",
+  "version": "1.0.0",
+  "publisher": "DavidPoliquin-PhiSOI",
+  "description": "Intégration native de l'environnement de bureau Windows 11 IA, du panneau Copilot, de la flotte multi-agents et de l'Atelier Studio Φ_SOI directement dans Antigravity IDE.",
+  "categories": [
+    "AI",
+    "Programming Languages",
+    "Machine Learning",
+    "Themes",
+    "Other"
+  ],
+  "engines": {
+    "antigravity": "^1.0.0 || ^2.0.0",
+    "vscode": "^1.85.0"
+  },
+  "main": "./dist/antigravity-extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:antigravity.phiso.openWindows11",
+    "onCommand:antigravity.phiso.openStudio",
+    "onCommand:antigravity.phiso.toggleView",
+    "onView:antigravity.view.windows11"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "antigravity-phiso-sidebar",
+          "title": "Windows 11 IA (Φ_SOI)",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "views": {
+      "antigravity-phiso-sidebar": [
+        {
+          "id": "antigravity.view.windows11",
+          "name": "Bureau Windows 11 IA",
+          "type": "webview"
+        },
+        {
+          "id": "antigravity.view.studio",
+          "name": "Atelier Studio Multi-Agents",
+          "type": "webview"
+        },
+        {
+          "id": "antigravity.view.telemetry",
+          "name": "Télémétrie Matériel & VRAM GPU",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "antigravity.phiso.openWindows11",
+        "title": "Ouvrir le Bureau Windows 11 IA",
+        "category": "Φ_SOI"
+      },
+      {
+        "command": "antigravity.phiso.openStudio",
+        "title": "Ouvrir l'Atelier Studio Multi-Agents",
+        "category": "Φ_SOI"
+      },
+      {
+        "command": "antigravity.phiso.toggleView",
+        "title": "Basculer entre Windows 11 et l'Atelier Studio",
+        "category": "Φ_SOI"
+      },
+      {
+        "command": "antigravity.phiso.scanHardware",
+        "title": "Scanner le Matériel Local (GPU/VRAM/Victron)",
+        "category": "Φ_SOI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "antigravity.phiso.toggleView",
+        "key": "ctrl+alt+w",
+        "mac": "cmd+alt+w"
+      }
+    ]
+  }
+}
